@@ -10,7 +10,8 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://nexbuildcorp.com/">
   <meta property="og:image" content="https://nexbuildcorp.com/assets/hero.webp">
-  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="./assets/favicon.png" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
@@ -37,17 +38,7 @@
   <header class="header" id="header">
     <div class="container header__inner">
       <a class="logo" href="#top" aria-label="NexBuild Contracting Corp home">
-        <svg viewBox="0 0 236 32" role="img" aria-label="NexBuild" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Mark: N whose second stroke drives forward into an arrow -->
-          <rect x="1" y="1" width="30" height="30" rx="4" stroke="currentColor" stroke-width="2"/>
-          <path d="M8 24V8l9 10.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M17 18.5 24 8" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M19.5 24.5h5.5v-5.5" stroke="#b8651a" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" class="logo-accent"/>
-          <!-- Wordmark -->
-          <text x="42" y="24" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="23" letter-spacing="-0.5" fill="currentColor">NE</text>
-          <path d="M74.5 10.5 79.5 16l-5 5.5" fill="#b8651a" class="logo-accent"/>
-          <text x="81" y="24" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="23" letter-spacing="-0.5" fill="currentColor">XBUILD</text>
-        </svg>
+        <img class="logo__img logo__img--dark" src="./assets/logo-horizontal.png" alt="NexBuild" width="720" height="145"><img class="logo__img logo__img--light" src="./assets/logo-horizontal-light.png" alt="" aria-hidden="true" width="720" height="145">
       </a>
       <nav class="nav" aria-label="Primary">
         <ul class="nav__links">
@@ -344,16 +335,8 @@
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <a class="logo" href="#top" aria-label="NexBuild Contracting Corp">
-          <svg viewBox="0 0 236 32" role="img" aria-label="NexBuild" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="1" y="1" width="30" height="30" rx="4" stroke="currentColor" stroke-width="2"/>
-            <path d="M8 24V8l9 10.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M17 18.5 24 8" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M19.5 24.5h5.5v-5.5" stroke="#b8651a" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" class="logo-accent"/>
-            <text x="42" y="24" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="23" letter-spacing="-0.5" fill="currentColor">NE</text>
-            <path d="M74.5 10.5 79.5 16l-5 5.5" fill="#b8651a" class="logo-accent"/>
-            <text x="81" y="24" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="23" letter-spacing="-0.5" fill="currentColor">XBUILD</text>
-          </svg>
+        <a class="logo logo--stacked" href="#top" aria-label="NexBuild Contracting Corp">
+          <img class="logo__img logo__img--dark" src="./assets/logo-stacked.png" alt="NexBuild — Built strong. Built forward." width="480" height="384"><img class="logo__img logo__img--light" src="./assets/logo-stacked-light.png" alt="" aria-hidden="true" width="480" height="384">
         </a>
         <p>NexBuild Contracting Corp is a commercial general contractor based in Brooklyn, New York.</p>
       </div>
