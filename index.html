@@ -10,12 +10,13 @@
   <meta property="og:type" content="website">
   <link rel="canonical" href="https://www.nexbuildcorp.com/">
   <meta property="og:url" content="https://www.nexbuildcorp.com/">
-  <meta property="og:image" content="https://www.nexbuildcorp.com/assets/hero.webp">
+  <meta property="og:image" content="https://www.nexbuildcorp.com/assets/og-logo.png">
+  <meta name="theme-color" content="#0b0b0c">
   <link rel="icon" href="./assets/favicon.png" type="image/png" sizes="64x64">
   <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="./assets/hero.webp">
   <link rel="stylesheet" href="./base.css">
   <link rel="stylesheet" href="./style.css">
@@ -40,7 +41,7 @@
   <header class="header" id="header">
     <div class="container header__inner">
       <a class="logo" href="#top" aria-label="NexBuild Contracting Corp home">
-        <img class="logo__img logo__img--dark" src="./assets/logo-horizontal.png" alt="NexBuild" width="720" height="145"><img class="logo__img logo__img--light" src="./assets/logo-horizontal-light.png" alt="" aria-hidden="true" width="720" height="145">
+        <img class="logo__img" src="./assets/logo-horizontal-light.png" alt="NexBuild — Built strong. Built forward." width="720" height="145">
       </a>
       <nav class="nav" aria-label="Primary">
         <ul class="nav__links">
@@ -50,9 +51,8 @@
           <li><a href="#about">About</a></li>
         </ul>
         <div class="nav__actions">
-          <button class="icon-btn" data-theme-toggle aria-label="Switch to dark mode" title="Toggle color mode"></button>
           <a class="nav__phone" href="tel:+19299895958">(929) 989-5958</a>
-          <a class="btn btn--ink" href="#contact">Request a proposal</a>
+          <a class="btn btn--gold" href="#contact">Contact us today</a>
           <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
           </button>
@@ -75,23 +75,31 @@
       <div class="hero__media">
         <img src="./assets/hero.webp" alt="Tile setter laying large-format floor tile inside a commercial interior under construction" width="2000" height="1333" fetchpriority="high">
       </div>
+      <div class="hero__slash" aria-hidden="true"></div>
       <div class="container hero__inner">
-        <div>
+        <div class="hero__copy">
           <span class="eyebrow hero__eyebrow">Commercial & Residential General Contractor · Brooklyn, NY</span>
           <h1>Commercial & Residential spaces, <em>built to schedule.</em></h1>
           <p class="hero__lede">NexBuild delivers medical, office and retail fit-outs and home renovations across New York City and New Jersey, managing every trade, submittal and inspection between the drawings and the keys.</p>
           <div class="hero__cta">
-            <a class="btn btn--primary" href="#contact">Request a proposal
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            <a class="btn btn--ghost" href="#work">See selected work</a>
+            <a class="btn btn--gold btn--lg" href="tel:+19299895958">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.8.7a2 2 0 0 1 1.8 2z"/></svg>
+              929-989-5958</a>
+            <a class="btn btn--outline btn--lg" href="#contact">Request a proposal</a>
           </div>
         </div>
-        <dl class="hero__meta">
-          <div><dt>Service area</dt><dd><strong>Five boroughs, Westchester County & New Jersey</strong></dd></div>
-          <div><dt>Sectors</dt><dd><strong>Medical · Office · Retail · Residential</strong></dd></div>
-          <div><dt>Scope</dt><dd><strong>Pre-construction through DOB closeout</strong></dd></div>
-        </dl>
+        <ul class="hero__services" role="list" aria-label="Services">
+          <li><span class="hex" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6 6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><path d="M8 15v1a6 6 0 0 0 6 6 6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/></svg></span><span>Medical Clinic<br>Construction</span></li>
+          <li><span class="hex" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v16M15 9h3a1 1 0 0 1 1 1v11M9 7h2M9 11h2M9 15h2"/></svg></span><span>Office Buildouts<br>& Renovations</span></li>
+          <li><span class="hex" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-7h6v7"/></svg></span><span>Kitchens, Baths<br>& Apartments</span></li>
+          <li><span class="hex" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4 20 10 10 20 4 14z"/><path d="M4 14l-1.5 1.5a2 2 0 0 0 0 2.8l3.2 3.2a2 2 0 0 0 2.8 0L10 20M14 4l1.5-1.5a2 2 0 0 1 2.8 0l3.2 3.2a2 2 0 0 1 0 2.8L20 10"/></svg></span><span>General<br>Contracting</span></li>
+        </ul>
       </div>
+      <dl class="hero__meta container">
+        <div><dt>Service area</dt><dd>Five boroughs, Westchester County & New Jersey</dd></div>
+        <div><dt>Sectors</dt><dd>Medical · Office · Retail · Residential</dd></div>
+        <div><dt>Scope</dt><dd>Pre-construction through DOB closeout</dd></div>
+      </dl>
     </section>
 
     <!-- INTRO -->
@@ -166,7 +174,7 @@
         </div>
         <ol class="steps">
           <li class="step reveal">
-            <span class="step__num" aria-hidden="true"></span>
+            <span class="step__num" aria-hidden="true">01</span>
             <div>
               <h3>Pre-construction</h3>
               <p>We walk the space, reconcile the drawings against field conditions, and return a scope-by-scope proposal that separates committed work from allowances, so you know exactly what's priced and what's still a decision.</p>
@@ -174,7 +182,7 @@
             </div>
           </li>
           <li class="step reveal">
-            <span class="step__num" aria-hidden="true"></span>
+            <span class="step__num" aria-hidden="true">02</span>
             <div>
               <h3>Procurement</h3>
               <p>Doors and hardware, operators, lighting and controls, solid-surface tops, millwork. We verify quantities against the schedule, confirm lead times in writing, and release purchase orders with fixed delivery dates before the trade needs them.</p>
@@ -182,7 +190,7 @@
             </div>
           </li>
           <li class="step reveal">
-            <span class="step__num" aria-hidden="true"></span>
+            <span class="step__num" aria-hidden="true">03</span>
             <div>
               <h3>Construction & coordination</h3>
               <p>One point of accountability across subcontractors, building management, the design team and the owner. Field questions become written RFIs. Changes become documented change orders before the work happens, not after.</p>
@@ -190,7 +198,7 @@
             </div>
           </li>
           <li class="step reveal">
-            <span class="step__num" aria-hidden="true"></span>
+            <span class="step__num" aria-hidden="true">04</span>
             <div>
               <h3>Closeout & turnover</h3>
               <p>Inspections scheduled early, documentation assembled as the work is built, punch list run to zero. You get a space that passes, and a closeout package you can hand to your facilities team.</p>
@@ -329,6 +337,8 @@
                 <option>Medical / clinical</option>
                 <option>Office / tenant improvement</option>
                 <option>Retail / lobby</option>
+                <option>Kitchen or bathroom renovation</option>
+                <option>Apartment, brownstone or house renovation</option>
                 <option>Repairs / facility work</option>
                 <option>Other</option>
               </select>
@@ -345,11 +355,16 @@
     </section>
   </main>
 
+  <a class="callbar" href="tel:+19299895958">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.8.7a2 2 0 0 1 1.8 2z"/></svg>
+    Call 929-989-5958
+  </a>
+
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
         <a class="logo logo--stacked" href="#top" aria-label="NexBuild Contracting Corp">
-          <img class="logo__img logo__img--dark" src="./assets/logo-stacked.png" alt="NexBuild — Built strong. Built forward." width="480" height="384"><img class="logo__img logo__img--light" src="./assets/logo-stacked-light.png" alt="" aria-hidden="true" width="480" height="384">
+          <img class="logo__img" src="./assets/logo-stacked-light.png" alt="NexBuild — Built strong. Built forward." width="480" height="384">
         </a>
         <p>NexBuild Contracting Corp is a commercial and residential general contractor based in Brooklyn, New York.</p>
       </div>
@@ -360,7 +375,7 @@
         </div>
         <div>
           <h4>Sectors</h4>
-          <ul><li>Medical & clinical</li><li>Office & tenant improvements</li><li>Retail & lobbies</li><li>Facility repairs</li></ul>
+          <ul><li>Medical & clinical</li><li>Office & tenant improvements</li><li>Retail & lobbies</li><li>Kitchens, baths & apartments</li><li>Facility repairs</li></ul>
         </div>
         <div>
           <h4>Contact</h4>
