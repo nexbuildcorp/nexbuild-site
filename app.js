@@ -57,7 +57,7 @@
       'Details:',
       f.get('details')
     ].join('\n');
-    const href = 'mailto:ergi@nexbuildcorp.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    const href = 'mailto:info@nexbuildcorp.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     status.textContent = 'Opening your email app with the request pre-filled.';
     window.open(href, '_blank', 'noopener');
   });
