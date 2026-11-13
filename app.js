@@ -28,6 +28,57 @@
     items.forEach(el => el.classList.add('is-visible'));
   }
 
+
+  // Project photo lightbox
+  const dataEl = document.getElementById('galleryData');
+  const lb = document.getElementById('lightbox');
+  if (dataEl && lb) {
+    const data = JSON.parse(dataEl.textContent);
+    const img = document.getElementById('lbImg');
+    const cap = document.getElementById('lbCap');
+    let site = null, idx = 0, lastFocus = null;
+    const src = (s, id) => './assets/projects/' + s + '/' + id + '.webp';
+    function show(i) {
+      const list = data[site].items;
+      idx = (i + list.length) % list.length;
+      img.src = src(site, list[idx]);
+      img.alt = data[site].label + ' — project photo ' + (idx + 1) + ' of ' + list.length;
+      cap.textContent = data[site].label + ' · ' + (idx + 1) + ' / ' + list.length;
+      // preload neighbours
+      [idx + 1, idx - 1].forEach(j => { const p = new Image(); p.src = src(site, list[(j + list.length) % list.length]); });
+    }
+    function open(s, i, trigger) {
+      site = s; lastFocus = trigger || document.activeElement;
+      lb.hidden = false; document.body.classList.add('lb-open');
+      show(i);
+      document.getElementById('lbClose').focus();
+    }
+    function close() {
+      lb.hidden = true; document.body.classList.remove('lb-open'); img.src = '';
+      lastFocus && lastFocus.focus && lastFocus.focus();
+    }
+    document.querySelectorAll('[data-site][data-index]').forEach(btn => {
+      btn.addEventListener('click', () => open(btn.dataset.site, Number(btn.dataset.index), btn));
+    });
+    document.getElementById('lbClose').addEventListener('click', close);
+    document.getElementById('lbPrev').addEventListener('click', () => show(idx - 1));
+    document.getElementById('lbNext').addEventListener('click', () => show(idx + 1));
+    lb.addEventListener('click', (e) => { if (e.target === lb) close(); });
+    addEventListener('keydown', (e) => {
+      if (lb.hidden) return;
+      if (e.key === 'Escape') close();
+      else if (e.key === 'ArrowRight') show(idx + 1);
+      else if (e.key === 'ArrowLeft') show(idx - 1);
+    });
+    let tx = null;
+    lb.addEventListener('touchstart', (e) => { tx = e.changedTouches[0].clientX; }, { passive: true });
+    lb.addEventListener('touchend', (e) => {
+      if (tx === null) return;
+      const dx = e.changedTouches[0].clientX - tx; tx = null;
+      if (Math.abs(dx) > 50) show(dx < 0 ? idx + 1 : idx - 1);
+    }, { passive: true });
+  }
+
   // Year
   const y = document.getElementById('year');
   y && (y.textContent = new Date().getFullYear());
